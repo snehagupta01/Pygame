@@ -16,4 +16,11 @@ screen.fill(red)
 pygame.display.set_caption("Snake")
 pygame.display.flip()
 while True:
-     print("hi")
+    #  print("hi")
+    for event in pygame.event.get():
+        print(event)
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    pygame.display.update()
+
